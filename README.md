@@ -5,8 +5,10 @@ Single-page static site (Home, About, Speaking Topics, Inquiry) with a built-in
 inquiry modal + full inquiry page, the hero sizzle-reel lightbox, testimonials,
 client logos, and a planner FAQ.
 
-**`index.html` is the only file you need to deploy.** It is fully self-contained
-(all styles, fonts, and scripts are inlined) and works offline — no build step.
+**Deploy `index.html` + `support.js` together** (same folder). `index.html` is the
+page; `support.js` is a small runtime it loads, and it pulls React + fonts from a
+CDN at runtime — so the file stays tiny and the page paints instantly (no splash,
+no build step).
 
 ---
 
@@ -15,7 +17,7 @@ client logos, and a planner FAQ.
 ```bash
 # from this folder
 git init
-git add index.html netlify.toml README.md
+git add index.html support.js netlify.toml README.md
 git commit -m "Call Me Coach speaker site"
 git branch -M main
 git remote add origin https://github.com/<your-username>/callmecoach.git
@@ -56,7 +58,7 @@ The form is pre-wired for **Formspree** (free tier is plenty to start).
    ```
 
    Paste your ID between the quotes, e.g. `FORMSPREE_ID = "xayzabcd";`
-5. Re-export `index.html` (ask Claude to "re-bundle index.html") and push again.
+5. Re-export `index.html` (ask Claude to "refresh index.html") and push again.
 
 > Until an ID is set, the form still validates and shows the success screen, but
 > no email is sent. Basin or Getform work the same way — just swap the endpoint
@@ -82,8 +84,8 @@ then remove the old Squarespace site once the new one resolves.
 ## Editing the site
 
 The real source is **`Call Me Coach.dc.html`** — edit that (text, colors,
-testimonials, topics), then re-bundle to refresh `index.html`. Don't hand-edit
-`index.html`; it's a compiled output.
+testimonials, topics), then refresh `index.html` from it. Keep `support.js`
+alongside `index.html` whenever you deploy.
 
 ## Notes / TODO before launch
 
