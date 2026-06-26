@@ -5,10 +5,11 @@ Single-page static site (Home, About, Speaking Topics, Inquiry) with a built-in
 inquiry modal + full inquiry page, the hero sizzle-reel lightbox, testimonials,
 client logos, and a planner FAQ.
 
-**Deploy `index.html` + `support.js` together** (same folder). `index.html` is the
-page; `support.js` is a small runtime it loads, and it pulls React + fonts from a
-CDN at runtime — so the file stays tiny and the page paints instantly (no splash,
-no build step).
+**Deploy `index.html` + `support.js` + the `uploads/` folder together** (same
+structure). `index.html` is the page; `support.js` is a small runtime it loads,
+and it pulls React + fonts from a CDN at runtime — so the file stays tiny and the
+page paints instantly (no splash, no build step). `uploads/` holds the photos of
+Greg the page references.
 
 ---
 
@@ -17,7 +18,7 @@ no build step).
 ```bash
 # from this folder
 git init
-git add index.html support.js netlify.toml README.md
+git add index.html support.js netlify.toml README.md uploads/
 git commit -m "Call Me Coach speaker site"
 git branch -M main
 git remote add origin https://github.com/<your-username>/callmecoach.git
@@ -42,27 +43,23 @@ Any future `git push` to `main` auto-deploys.
 
 ---
 
-## 3. Connect the inquiry form (so Greg gets the emails)
+## 3. The inquiry form (already built in — Netlify Forms)
 
-The form is pre-wired for **Formspree** (free tier is plenty to start).
+The inquiry form is wired to **Netlify Forms**, so it works the moment you deploy
+to Netlify — no third-party account, no API key. A hidden detection form lives in
+`index.html` and Netlify captures every submission automatically.
 
-1. Create a free account at **formspree.io** and add a new form.
-2. Point its notifications to Greg's email; Formspree also sends the inquirer a
-   confirmation if you enable **autoresponse**.
-3. Copy the form ID from the endpoint it gives you —
-   `https://formspree.io/f/XXXXXXXX` → the ID is `XXXXXXXX`.
-4. Open **`Call Me Coach.dc.html`**, find this line near the top of the logic:
+**To get the emails:**
 
-   ```js
-   FORMSPREE_ID = "";
-   ```
+1. After the first deploy, open **Netlify → your site → Forms**. You'll see a
+   form named **`inquiry`** and any test submissions.
+2. Go to **Site configuration → Forms → Form notifications → Add notification →
+   Email notification** and enter Greg's email. Done — every inquiry now emails
+   him and is also stored in the dashboard.
 
-   Paste your ID between the quotes, e.g. `FORMSPREE_ID = "xayzabcd";`
-5. Re-export `index.html` (ask Claude to "refresh index.html") and push again.
-
-> Until an ID is set, the form still validates and shows the success screen, but
-> no email is sent. Basin or Getform work the same way — just swap the endpoint
-> URL in the `submit` function.
+> On the live site (`*.netlify.app` or your `callmecoach` domain) the form submits
+> for real. In local preview it just validates and shows the success screen.
+> Netlify's free tier includes 100 submissions/month.
 
 ---
 

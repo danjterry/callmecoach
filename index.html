@@ -26,13 +26,13 @@
 <div style="min-height:100vh; display:flex; flex-direction:column;">
 
 <!-- ===================== NAV ===================== -->
-<header style="position:sticky; top:0; z-index:60; background:rgba(11,27,51,0.94); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.08);">
+<header style="position:sticky; top:0; z-index:60; background:rgba(255,255,255,0.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(11,27,51,0.09);">
   <div style="max-width:1200px; margin:0 auto; padding:0 clamp(20px,5vw,48px); height:74px; display:flex; align-items:center; justify-content:space-between;">
     <a href="#" onClick="{{ goHome }}" style="display:flex; align-items:center; gap:11px; text-decoration:none;">
       <span style="width:30px; height:30px; border-radius:7px; background:#E12B33; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(225,43,51,0.4);">
         <span style="width:11px; height:11px; border-radius:50%; background:#fff;"></span>
       </span>
-      <span style="font-family:'Archivo'; font-weight:800; font-size:18px; letter-spacing:0.16em; color:#fff;">CALL ME <span style="color:#C8A24C;">COACH</span></span>
+      <span style="font-family:'Archivo'; font-weight:800; font-size:18px; letter-spacing:0.16em; color:#0B1B33;">CALL ME <span style="color:#C8A24C;">COACH</span></span>
     </a>
 
     <sc-if value="{{ notCompact }}" hint-placeholder-val="{{ true }}">
@@ -46,18 +46,18 @@
 
     <sc-if value="{{ compact }}" hint-placeholder-val="{{ false }}">
       <button onClick="{{ toggleNav }}" aria-label="Menu" style="background:transparent; border:none; cursor:pointer; padding:8px; display:flex; flex-direction:column; gap:5px;">
-        <span style="width:26px; height:2px; background:#fff; display:block;"></span>
-        <span style="width:26px; height:2px; background:#fff; display:block;"></span>
-        <span style="width:26px; height:2px; background:#fff; display:block;"></span>
+        <span style="width:26px; height:2px; background:#0B1B33; display:block;"></span>
+        <span style="width:26px; height:2px; background:#0B1B33; display:block;"></span>
+        <span style="width:26px; height:2px; background:#0B1B33; display:block;"></span>
       </button>
     </sc-if>
   </div>
 
   <sc-if value="{{ showDrawer }}" hint-placeholder-val="{{ false }}">
-    <div style="background:#0B1B33; border-top:1px solid rgba(255,255,255,0.08); padding:14px clamp(20px,5vw,48px) 24px; display:flex; flex-direction:column; gap:4px;">
-      <a href="#" onClick="{{ goHome }}" style="font-family:'Archivo'; font-weight:600; font-size:16px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.06);">Home</a>
-      <a href="#" onClick="{{ goAbout }}" style="font-family:'Archivo'; font-weight:600; font-size:16px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.06);">About</a>
-      <a href="#" onClick="{{ goTopics }}" style="font-family:'Archivo'; font-weight:600; font-size:16px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.06);">Speaking Topics</a>
+    <div style="background:#fff; border-top:1px solid rgba(11,27,51,0.08); padding:14px clamp(20px,5vw,48px) 24px; display:flex; flex-direction:column; gap:4px;">
+      <a href="#" onClick="{{ goHome }}" style="font-family:'Archivo'; font-weight:600; font-size:16px; color:#0B1B33; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(11,27,51,0.07);">Home</a>
+      <a href="#" onClick="{{ goAbout }}" style="font-family:'Archivo'; font-weight:600; font-size:16px; color:#0B1B33; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(11,27,51,0.07);">About</a>
+      <a href="#" onClick="{{ goTopics }}" style="font-family:'Archivo'; font-weight:600; font-size:16px; color:#0B1B33; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(11,27,51,0.07);">Speaking Topics</a>
       <button onClick="{{ openModal }}" style="margin-top:12px; background:#E12B33; color:#fff; border:none; font-family:'Archivo'; font-weight:700; font-size:14px; letter-spacing:0.06em; text-transform:uppercase; padding:15px; border-radius:6px; cursor:pointer;">Book Greg</button>
     </div>
   </sc-if>
@@ -70,31 +70,32 @@
 <div data-screen-label="Home">
 
   <!-- HERO -->
-  <section style="position:relative; background:#0B1B33; color:#fff; overflow:hidden;">
-    <div style="position:absolute; inset:0; background:radial-gradient(1100px 600px at 80% 0%, rgba(200,162,76,0.16), transparent 60%), radial-gradient(900px 700px at 0% 100%, rgba(225,43,51,0.14), transparent 55%);"></div>
+  <section style="position:relative; background:#F6F4EF; color:#0B1B33; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(1100px 600px at 80% 0%, rgba(200,162,76,0.16), transparent 60%), radial-gradient(900px 700px at 0% 100%, rgba(225,43,51,0.07), transparent 55%);"></div>
     <div style="position:relative; max-width:1200px; margin:0 auto; padding:clamp(48px,7vw,90px) clamp(20px,5vw,48px) clamp(40px,5vw,70px); display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:clamp(36px,5vw,64px); align-items:center;">
       <div style="animation:cmc-fadeup 0.7s ease both;">
-        <div style="display:inline-flex; align-items:center; gap:10px; color:#C8A24C; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:24px;">
-          <span style="width:26px; height:1px; background:#C8A24C;"></span>Keynote Speaker · Executive Coach
+        <div style="display:inline-flex; align-items:center; gap:10px; color:#E12B33; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:24px;">
+          <span style="width:26px; height:1px; background:#E12B33;"></span>Keynote Speaker · Executive Coach
         </div>
-        <h1 style="font-family:'Archivo'; font-weight:900; font-size:clamp(40px,5.6vw,74px); line-height:0.98; letter-spacing:-0.015em; margin:0 0 22px;">Meet your next<br><span style="color:#C8A24C;">keynote speaker.</span></h1>
-        <p style="font-size:clamp(17px,1.5vw,20px); line-height:1.55; color:rgba(255,255,255,0.74); max-width:520px; margin:0 0 34px;">Greg Taylor delivers high-energy keynotes that align culture, sharpen leaders, and get teams performing at their best. When the pressure's on — call me coach.</p>
+        <h1 style="font-family:'Archivo'; font-weight:900; font-size:clamp(40px,5.6vw,74px); line-height:0.98; letter-spacing:-0.015em; margin:0 0 22px;">Meet your next<br><span style="color:#E12B33;">keynote speaker.</span></h1>
+        <p style="font-size:clamp(17px,1.5vw,20px); line-height:1.55; color:#48566B; max-width:520px; margin:0 0 34px;">Greg Taylor delivers high-energy keynotes that align culture, sharpen leaders, and get teams performing at their best. When the pressure's on — call me coach.</p>
         <div style="display:flex; flex-wrap:wrap; gap:14px;">
           <button onClick="{{ openModal }}" style="display:inline-flex; align-items:center; gap:10px; background:#E12B33; color:#fff; border:none; font-family:'Archivo'; font-weight:700; font-size:15px; letter-spacing:0.05em; text-transform:uppercase; padding:17px 28px; border-radius:7px; cursor:pointer; transition:background 0.18s, transform 0.18s;" style-hover="background:#C01E26; transform:translateY(-2px);">Book Greg for your event</button>
-          <button onClick="{{ goTopics }}" style="display:inline-flex; align-items:center; gap:10px; background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.32); font-family:'Archivo'; font-weight:700; font-size:15px; letter-spacing:0.05em; text-transform:uppercase; padding:17px 28px; border-radius:7px; cursor:pointer; transition:border-color 0.18s;" style-hover="border-color:#C8A24C;">View speaking topics</button>
+          <button onClick="{{ goTopics }}" style="display:inline-flex; align-items:center; gap:10px; background:transparent; color:#0B1B33; border:1px solid rgba(11,27,51,0.28); font-family:'Archivo'; font-weight:700; font-size:15px; letter-spacing:0.05em; text-transform:uppercase; padding:17px 28px; border-radius:7px; cursor:pointer; transition:border-color 0.18s;" style-hover="border-color:#C8A24C;">View speaking topics</button>
         </div>
-        <div style="margin-top:28px; display:inline-flex; align-items:center; gap:13px; background:rgba(255,255,255,0.05); border:1px solid rgba(200,162,76,0.4); border-radius:11px; padding:12px 17px;">
+        <div style="margin-top:28px; display:inline-flex; align-items:center; gap:13px; background:#fff; border:1px solid rgba(200,162,76,0.55); border-radius:11px; padding:12px 17px; box-shadow:0 10px 28px -18px rgba(11,27,51,0.45);">
           <span style="flex:none; width:36px; height:36px; border-radius:9px; background:#C8A24C; color:#0B1B33; display:flex; align-items:center; justify-content:center; font-family:'Archivo'; font-weight:900; font-size:17px;">★</span>
-          <span style="font-size:13.5px; line-height:1.4; color:rgba(255,255,255,0.82);"><strong style="color:#fff; font-family:'Archivo'; font-weight:700;">Top 20 Leadership Development &amp; Coaching Companies</strong><br>Recognized by HR Tech Outlook · 2022</span>
+          <span style="font-size:13.5px; line-height:1.4; color:#48566B;"><strong style="color:#0B1B33; font-family:'Archivo'; font-weight:700;">Top 20 Leadership Development &amp; Coaching Companies</strong><br>Recognized by HR Tech Outlook · 2022</span>
         </div>
       </div>
 
       <!-- video placeholder -->
       <div style="position:relative;">
-        <div style="position:relative; aspect-ratio:4/5; border-radius:14px; overflow:hidden; background:linear-gradient(160deg,#143a63,#0B1B33 70%); border:1px solid rgba(255,255,255,0.1); box-shadow:0 40px 80px -30px rgba(0,0,0,0.6);">
-          <div style="position:absolute; inset:0; background:repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0 2px, transparent 2px 22px);"></div>
+        <div style="position:relative; aspect-ratio:4/5; border-radius:14px; overflow:hidden; background:#0B1B33; border:1px solid rgba(11,27,51,0.12); box-shadow:0 40px 80px -30px rgba(11,27,51,0.45);">
+          <img src="uploads/DSC07408.jpg" alt="Greg Taylor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 20%;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(11,27,51,0.6), rgba(11,27,51,0.04) 42%, rgba(11,27,51,0.18));"></div>
           <div style="position:absolute; left:22px; top:22px; display:inline-flex; align-items:center; gap:8px; background:rgba(225,43,51,0.92); color:#fff; font-family:'Archivo'; font-weight:700; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; padding:7px 12px; border-radius:5px;"><span style="width:7px; height:7px; border-radius:50%; background:#fff;"></span>Sizzle Reel</div>
-          <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:88px;">
             <div style="position:relative; width:84px; height:84px;">
               <span style="position:absolute; inset:0; border-radius:50%; border:2px solid #C8A24C; animation:cmc-pulse 2.4s ease-out infinite;"></span>
               <button onClick="{{ openVideo }}" style="position:relative; width:84px; height:84px; border-radius:50%; background:rgba(255,255,255,0.95); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform 0.18s;" style-hover="transform:scale(1.06);">
@@ -112,12 +113,12 @@
     </div>
 
     <!-- stat strip -->
-    <div style="position:relative; border-top:1px solid rgba(255,255,255,0.1);">
+    <div style="position:relative; border-top:1px solid rgba(11,27,51,0.1);">
       <div style="max-width:1200px; margin:0 auto; padding:0 clamp(20px,5vw,48px); display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));">
-        <div style="padding:26px 8px; border-right:1px solid rgba(255,255,255,0.08);"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#C8A24C;">30+</div><div style="font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.6); text-transform:uppercase;">Years coaching leaders</div></div>
-        <div style="padding:26px 8px; border-right:1px solid rgba(255,255,255,0.08);"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#fff;">500+</div><div style="font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.6); text-transform:uppercase;">Keynotes delivered</div></div>
-        <div style="padding:26px 8px; border-right:1px solid rgba(255,255,255,0.08);"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#fff;">98%</div><div style="font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.6); text-transform:uppercase;">Rebooking rate</div></div>
-        <div style="padding:26px 8px;"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#fff;">50k+</div><div style="font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.6); text-transform:uppercase;">Leaders reached</div></div>
+        <div style="padding:26px 8px; border-right:1px solid rgba(11,27,51,0.08);"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#E12B33;">30+</div><div style="font-size:13px; letter-spacing:0.04em; color:#7C8699; text-transform:uppercase;">Years coaching leaders</div></div>
+        <div style="padding:26px 8px; border-right:1px solid rgba(11,27,51,0.08);"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#0B1B33;">500+</div><div style="font-size:13px; letter-spacing:0.04em; color:#7C8699; text-transform:uppercase;">Keynotes delivered</div></div>
+        <div style="padding:26px 8px; border-right:1px solid rgba(11,27,51,0.08);"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#0B1B33;">98%</div><div style="font-size:13px; letter-spacing:0.04em; color:#7C8699; text-transform:uppercase;">Rebooking rate</div></div>
+        <div style="padding:26px 8px;"><div style="font-family:'Archivo'; font-weight:900; font-size:34px; color:#0B1B33;">50k+</div><div style="font-size:13px; letter-spacing:0.04em; color:#7C8699; text-transform:uppercase;">Leaders reached</div></div>
       </div>
     </div>
   </section>
@@ -151,14 +152,14 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section style="background:#0B1B33; color:#fff; padding:clamp(64px,8vw,110px) clamp(20px,5vw,48px);">
+  <section style="background:#F6F4EF; color:#0B1B33; padding:clamp(64px,8vw,110px) clamp(20px,5vw,48px);">
     <div style="max-width:1200px; margin:0 auto;">
       <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:48px;">
         <div>
-          <div style="color:#C8A24C; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px;">Proof in the room</div>
+          <div style="color:#E12B33; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px;">Proof in the room</div>
           <h2 style="font-family:'Archivo'; font-weight:800; font-size:clamp(30px,4vw,46px); line-height:1.05; letter-spacing:-0.01em; margin:0;">What planners and<br>leaders say</h2>
         </div>
-        <button onClick="{{ openModal }}" style="background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.3); font-family:'Archivo'; font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; padding:14px 24px; border-radius:7px; cursor:pointer; transition:border-color 0.18s;" style-hover="border-color:#C8A24C;">Book Greg</button>
+        <button onClick="{{ openModal }}" style="background:transparent; color:#0B1B33; border:1px solid rgba(11,27,51,0.22); font-family:'Archivo'; font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; padding:14px 24px; border-radius:7px; cursor:pointer; transition:border-color 0.18s;" style-hover="border-color:#C8A24C;">Book Greg</button>
       </div>
 
       <!-- video testimonials -->
@@ -179,30 +180,30 @@
 
       <!-- written -->
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;">
-        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:30px;">
+        <div style="background:#fff; border:1px solid rgba(11,27,51,0.1); border-radius:14px; padding:30px; box-shadow:0 12px 30px -22px rgba(11,27,51,0.5);">
           <div style="color:#C8A24C; font-family:'Archivo'; font-weight:900; font-size:40px; line-height:0.6;">“</div>
-          <p style="font-size:16px; line-height:1.6; color:rgba(255,255,255,0.86); margin:10px 0 22px;">Greg had 600 people on their feet and our managers talking about culture for months. Easiest rebooking decision we've made.</p>
+          <p style="font-size:16px; line-height:1.6; color:#2A3848; margin:10px 0 22px;">Greg had 600 people on their feet and our managers talking about culture for months. Easiest rebooking decision we've made.</p>
           <div style="font-family:'Archivo'; font-weight:700; font-size:15px;">Sarah Mitchell</div>
-          <div style="font-size:13px; color:rgba(255,255,255,0.6);">Director of Training · American Greetings</div>
+          <div style="font-size:13px; color:#7C8699;">Director of Training · American Greetings</div>
         </div>
-        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:30px;">
+        <div style="background:#fff; border:1px solid rgba(11,27,51,0.1); border-radius:14px; padding:30px; box-shadow:0 12px 30px -22px rgba(11,27,51,0.5);">
           <div style="color:#C8A24C; font-family:'Archivo'; font-weight:900; font-size:40px; line-height:0.6;">“</div>
-          <p style="font-size:16px; line-height:1.6; color:rgba(255,255,255,0.86); margin:10px 0 22px;">High energy, but it's the substance that lands. Our school board left with a shared language for accountability we still use.</p>
+          <p style="font-size:16px; line-height:1.6; color:#2A3848; margin:10px 0 22px;">High energy, but it's the substance that lands. Our school board left with a shared language for accountability we still use.</p>
           <div style="font-family:'Archivo'; font-weight:700; font-size:15px;">David Reyes</div>
-          <div style="font-size:13px; color:rgba(255,255,255,0.6);">Superintendent · Riverside USD</div>
+          <div style="font-size:13px; color:#7C8699;">Superintendent · Riverside USD</div>
         </div>
-        <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:14px; padding:30px;">
+        <div style="background:#fff; border:1px solid rgba(11,27,51,0.1); border-radius:14px; padding:30px; box-shadow:0 12px 30px -22px rgba(11,27,51,0.5);">
           <div style="color:#C8A24C; font-family:'Archivo'; font-weight:900; font-size:40px; line-height:0.6;">“</div>
-          <p style="font-size:16px; line-height:1.6; color:rgba(255,255,255,0.86); margin:10px 0 22px;">As a planner, I care about reliability. Greg was buttoned-up start to finish and tailored every story to our industry.</p>
+          <p style="font-size:16px; line-height:1.6; color:#2A3848; margin:10px 0 22px;">As a planner, I care about reliability. Greg was buttoned-up start to finish and tailored every story to our industry.</p>
           <div style="font-family:'Archivo'; font-weight:700; font-size:15px;">Lena Okafor</div>
-          <div style="font-size:13px; color:rgba(255,255,255,0.6);">Events Lead · Northstar Foundation</div>
+          <div style="font-size:13px; color:#7C8699;">Events Lead · Northstar Foundation</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CLIENT LOGOS -->
-  <section style="background:#F6F4EF; padding:clamp(54px,6vw,80px) clamp(20px,5vw,48px);">
+  <section style="background:#fff; padding:clamp(54px,6vw,80px) clamp(20px,5vw,48px);">
     <div style="max-width:1100px; margin:0 auto; text-align:center;">
       <div style="color:#7C8699; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:36px;">Trusted by organizations that play to win</div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px 32px; align-items:center;">
@@ -234,9 +235,9 @@
 <!-- ============================================================ ABOUT ============================================================ -->
 <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
 <div data-screen-label="About">
-  <section style="background:#0B1B33; color:#fff; padding:clamp(52px,6vw,84px) clamp(20px,5vw,48px) clamp(40px,5vw,60px);">
+  <section style="background:#F6F4EF; color:#0B1B33; padding:clamp(52px,6vw,84px) clamp(20px,5vw,48px) clamp(40px,5vw,60px);">
     <div style="max-width:1200px; margin:0 auto;">
-      <div style="color:#C8A24C; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px;">About Greg Taylor</div>
+      <div style="color:#E12B33; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px;">About Greg Taylor</div>
       <h1 style="font-family:'Archivo'; font-weight:900; font-size:clamp(36px,5vw,64px); line-height:1.0; letter-spacing:-0.015em; margin:0; max-width:880px;">Part coach, part catalyst — all in on your people.</h1>
     </div>
   </section>
@@ -245,7 +246,7 @@
     <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(36px,5vw,60px); align-items:start;">
       <div style="position:sticky; top:96px;">
         <div style="aspect-ratio:4/5; border-radius:16px; overflow:hidden; background:linear-gradient(160deg,#143a63,#0B1B33 75%); border:1px solid rgba(11,27,51,0.1); position:relative; box-shadow:0 30px 60px -30px rgba(11,27,51,0.4);">
-          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.4); font-family:'Archivo'; font-weight:700; font-size:14px; letter-spacing:0.1em; text-transform:uppercase;">Photo of Greg</div>
+          <img src="uploads/DSC07407.jpg" alt="Greg Taylor" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 18%;">
           <div style="position:absolute; left:0; right:0; bottom:0; padding:22px; background:linear-gradient(to top, rgba(11,27,51,0.92), transparent);"><div style="font-family:'Archivo'; font-weight:800; font-size:22px; color:#fff;">Greg Taylor</div><div style="font-size:14px; color:#C8A24C;">Executive Coach &amp; Keynote Speaker</div></div>
         </div>
       </div>
@@ -253,6 +254,10 @@
         <p style="font-size:19px; line-height:1.65; color:#2A3848; margin:0 0 22px;">For more than 30 years — through the wins, the knocks, and everything in between — Greg Taylor has helped leaders and organizations do the hard, human work of personal transformation. Using a process of insight and discovery he's refined across decades in corporate and personal leadership, he helps people learn from and inspire themselves, then carry that change to everyone around them.</p>
         <p style="font-size:17px; line-height:1.7; color:#48566B; margin:0 0 22px;">He's not chasing some idealized vision of perfection. He's after steady progress — the daily, incremental improvements that compound over time into complete transformation. On stage that looks like high energy and hard-won stories; in the weeks after, it looks like teams who've taken another step, and another, toward the results they want most. Greg judges his own success by his clients'.</p>
         <p style="font-size:17px; line-height:1.7; color:#48566B; margin:0 0 22px;">He's the author of <em>Find Your Winning Edge</em> and host of <em>The Leadership Factory</em> podcast — and his coaching practice was named one of the Top 20 Leadership Development &amp; Coaching Companies of 2022.</p>
+
+        <div style="margin:36px 0 10px; border-radius:14px; overflow:hidden; aspect-ratio:16/10; box-shadow:0 24px 50px -30px rgba(11,27,51,0.5);">
+          <img src="uploads/DSC07467.jpg" alt="Greg Taylor in conversation" style="width:100%; height:100%; object-fit:cover; object-position:50% 38%;">
+        </div>
 
         <h3 style="font-family:'Archivo'; font-weight:800; font-size:24px; margin:42px 0 18px;">What makes Greg different</h3>
         <div style="display:flex; flex-direction:column; gap:16px;">
@@ -279,11 +284,11 @@
 <!-- ============================================================ TOPICS ============================================================ -->
 <sc-if value="{{ isTopics }}" hint-placeholder-val="{{ false }}">
 <div data-screen-label="Speaking Topics">
-  <section style="background:#0B1B33; color:#fff; padding:clamp(52px,6vw,84px) clamp(20px,5vw,48px) clamp(40px,5vw,60px);">
+  <section style="background:#F6F4EF; color:#0B1B33; padding:clamp(52px,6vw,84px) clamp(20px,5vw,48px) clamp(40px,5vw,60px);">
     <div style="max-width:1200px; margin:0 auto;">
-      <div style="color:#C8A24C; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px;">Signature Keynotes</div>
+      <div style="color:#E12B33; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px;">Signature Keynotes</div>
       <h1 style="font-family:'Archivo'; font-weight:900; font-size:clamp(36px,5vw,64px); line-height:1.0; letter-spacing:-0.015em; margin:0 0 20px; max-width:840px;">Talks built to move people — and stick.</h1>
-      <p style="font-size:18px; line-height:1.6; color:rgba(255,255,255,0.74); max-width:620px; margin:0;">Each keynote is customized to your audience and outcomes. Pick a starting point below — every topic links straight to an inquiry.</p>
+      <p style="font-size:18px; line-height:1.6; color:#48566B; max-width:620px; margin:0;">Each keynote is customized to your audience and outcomes. Pick a starting point below — every topic links straight to an inquiry.</p>
     </div>
   </section>
 
@@ -394,11 +399,11 @@
 <!-- ============================================================ INQUIRY PAGE ============================================================ -->
 <sc-if value="{{ isInquiry }}" hint-placeholder-val="{{ false }}">
 <div data-screen-label="Inquiry">
-  <section style="background:#0B1B33; color:#fff; padding:clamp(48px,6vw,76px) clamp(20px,5vw,48px) clamp(36px,5vw,52px);">
+  <section style="background:#F6F4EF; color:#0B1B33; padding:clamp(48px,6vw,76px) clamp(20px,5vw,48px) clamp(36px,5vw,52px);">
     <div style="max-width:1100px; margin:0 auto;">
-      <div style="color:#C8A24C; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px;">Book Greg</div>
+      <div style="color:#E12B33; font-family:'Archivo'; font-weight:700; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:18px;">Book Greg</div>
       <h1 style="font-family:'Archivo'; font-weight:900; font-size:clamp(34px,4.5vw,56px); line-height:1.0; letter-spacing:-0.015em; margin:0 0 16px; max-width:740px;">Tell us about your event.</h1>
-      <p style="font-size:18px; line-height:1.6; color:rgba(255,255,255,0.74); max-width:560px; margin:0;">Share a few details and we'll send a tailored quote — usually within one business day. No preset pricing; every engagement is custom.</p>
+      <p style="font-size:18px; line-height:1.6; color:#48566B; max-width:560px; margin:0;">Share a few details and we'll send a tailored quote — usually within one business day. No preset pricing; every engagement is custom.</p>
     </div>
   </section>
 
@@ -508,6 +513,18 @@
 
 </div>
 </x-dc>
+<!-- Netlify Forms detection form (static markup so Netlify captures submissions). Hidden; the real form is the React one above. -->
+<form name="inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="organization" />
+  <input type="text" name="eventType" />
+  <input type="text" name="eventDateFrom" />
+  <input type="text" name="eventDateTo" />
+  <input type="number" name="attendees" />
+  <textarea name="message"></textarea>
+  <input type="text" name="bot-field" />
+</form>
 <template id="__bundler_thumbnail">
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <rect width="100" height="100" rx="14" fill="#0B1B33"/>
@@ -579,34 +596,37 @@ class Component extends DCLogic {
   }
 
   // ============================================================
-  // FORM BACKEND — paste your Formspree form ID below (e.g. "xayzabcd").
-  // Create a free form at https://formspree.io  →  copy the ID from the
-  // endpoint it gives you (https://formspree.io/f/XXXXXXXX  → "XXXXXXXX").
-  // Leave it as "" to keep the demo behaviour (no email is sent).
+  // FORM BACKEND — Netlify Forms (no third-party signup needed).
+  // The hidden <form name="inquiry" data-netlify="true"> at the bottom of the
+  // page lets Netlify detect and capture submissions automatically. Once
+  // deployed, entries appear under Netlify → Forms; add Greg's email under
+  // Site configuration → Forms → Form notifications to get emailed each one.
+  // On the live site (*.netlify.app or callmecoach.*) it submits for real;
+  // in preview / localhost it just shows the success screen.
   // ============================================================
-  FORMSPREE_ID = "";
-
   submit = (e) => {
     if (e && e.preventDefault) e.preventDefault();
     const errs = this.validate(this.state.form);
     if (Object.keys(errs).length) { this.setState({ errors: errs }); return; }
     const f = this.state.form;
-    if (!this.FORMSPREE_ID) { this.setState({ submitted: true }); return; }
+    const host = (location && location.hostname) || "";
+    const isLive = /netlify\.app$/.test(host) || /callmecoach/.test(host);
+    if (!isLive) { this.setState({ submitted: true }); return; }
     this.setState({ sending: true, errors: {} });
-    fetch("https://formspree.io/f/" + this.FORMSPREE_ID, {
-      method: "POST",
-      headers: { "Accept": "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: f.name, email: f.email, organization: f.org, eventType: f.eventType,
-        eventDateFrom: f.dateStart, eventDateTo: f.dateEnd, attendees: f.attendees,
-        message: f.message, _subject: "New speaking inquiry — Call Me Coach"
+    const data = {
+      "form-name": "inquiry", "bot-field": "",
+      name: f.name, email: f.email, organization: f.org, eventType: f.eventType,
+      eventDateFrom: f.dateStart, eventDateTo: f.dateEnd, attendees: f.attendees, message: f.message
+    };
+    const body = Object.keys(data).map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k] || "")).join("&");
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body })
+      .then((r) => {
+        if (r.ok) this.setState({ submitted: true, sending: false });
+        else this.setState({ sending: false, errors: { form: "Something went wrong sending your inquiry. Please email book@callmecoach.co." } });
       })
-    }).then((r) => {
-      if (r.ok) this.setState({ submitted: true, sending: false });
-      else this.setState({ sending: false, errors: { form: "Something went wrong sending your inquiry. Please email book@callmecoach.co." } });
-    }).catch(() => {
-      this.setState({ sending: false, errors: { form: "Network error — please email book@callmecoach.co." } });
-    });
+      .catch(() => {
+        this.setState({ sending: false, errors: { form: "Network error — please email book@callmecoach.co." } });
+      });
   };
 
   buildForm() {
@@ -654,7 +674,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const s = this.state;
-    const onNav = (p) => s.page === p ? '#C8A24C' : '#fff';
+    const onNav = (p) => s.page === p ? '#E12B33' : '#0B1B33';
     const formEl = this.buildForm();
     return {
       isHome: s.page === 'home', isAbout: s.page === 'about', isTopics: s.page === 'topics', isInquiry: s.page === 'inquiry',
